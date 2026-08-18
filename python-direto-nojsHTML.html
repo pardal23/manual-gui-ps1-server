@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <title>O Novo Programar com Variáveis</title>
+    <style>
+        h1 { color: green; text-align: center; font-family: sans-serif; }
+        body { font-family: sans-serif; padding: 20px; line-height: 1.6; }
+        .resultado { color: #d35400; font-weight: bold; font-size: 18px; }
+    </style>
+</head>
+<body>
+
+    <h1>O novo programar</h1>
+    <div id="python"></div>
+
+    <script>
+        // === O TEU SCRIPT DE VARIÁVEIS ===
+        // Define os valores e faz as contas aqui em cima
+        let conta_facil = 234 * 56 / 34 + 76;
+        let conta_dificil = 765438 * 3456 / 45 + 56473;
+        
+        let link_imagem = "https://bibliaeteologia.com.br/wp-content/uploads/2024/06/os-frutos-do-Espirito-Santo.webp";
+        let musica = "A Minha Música Preferida 🎵";
+
+        // === O MOTOR INNERHTML (ASPA CASE) ===
+        // Injeta os resultados diretamente na estrutura da página
+        const python = document.getElementById("python");
+        
+        python.innerHTML = `
+            <h3>As minhas contas:</h3>
+            <p><span class="resultado">${conta_facil.toFixed(2)}</span> : esta conta é fácil</p>
+            <p><span class="resultado">${conta_dificil.toFixed(2)}</span> : esta conta é difícil</p>
+            
+            <h3>Minha imagem louca:</h3>
+            <img src="${link_imagem}" width="500" alt="Espírito Santo"><br>
+            
+            <h1>${musica}</h1>
+        `;
+    </script>
+
+</body>
+</html>
